@@ -46,8 +46,11 @@
       dateObject.setDate(dateObject.getDate() + parseInt(days));
 
       // Convert the date back to a string and format it
-      var result = dateObject.toLocaleDateString('en-US');
-
+var result = dateObject.toLocaleDateString('fr-FR', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric'
+});
       // Display the result
       document.getElementById('result').innerHTML = 'Result: ' + result;
     }
